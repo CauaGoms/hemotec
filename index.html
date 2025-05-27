@@ -1,0 +1,328 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Doação de Sangue
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-sans">
+  <div class="min-h-screen flex flex-col">
+   <!-- Header -->
+   <header class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-tint text-red-600 text-2xl">
+      </i>
+      <h1 class="text-xl font-semibold">
+       Doação de Sangue
+      </h1>
+     </div>
+     <nav class="space-x-8">
+      <a class="text-gray-700 hover:text-red-600" href="#">
+       Início
+      </a>
+      <a class="text-gray-700 hover:text-red-600" href="#">
+       Doadores
+      </a>
+      <a class="text-gray-700 hover:text-red-600" href="#">
+       Campanhas
+      </a>
+      <a class="text-gray-700 hover:text-red-600" href="#">
+       Relatórios
+      </a>
+     </nav>
+     <div class="flex items-center space-x-4">
+      <img alt="User profile picture" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/Nbwrve9wSoWN8na305-BgtyKxD5-uNqXfmNYyIpYWjo.jpg" width="40"/>
+     </div>
+    </div>
+   </header>
+   <!-- Main Content -->
+   <div class="flex flex-1">
+    <!-- Sidebar -->
+    <aside class="bg-white w-64 p-4 shadow-md">
+     <ul class="space-y-4">
+      <li class="flex items-center space-x-2 text-red-600">
+       <i class="fas fa-home">
+       </i>
+       <span>
+        Painel
+       </span>
+      </li>
+      <li class="flex items-center space-x-2 text-gray-700 hover:text-red-600">
+       <i class="fas fa-hospital">
+       </i>
+       <span>
+        Hemocentro
+       </span>
+      </li>
+      <li class="flex items-center space-x-2 text-gray-700 hover:text-red-600">
+       <i class="fas fa-calendar-alt">
+       </i>
+       <span>
+        Agendamentos
+       </span>
+      </li>
+      <li class="flex items-center space-x-2 text-gray-700 hover:text-red-600">
+       <i class="fas fa-bell">
+       </i>
+       <span>
+        Notificações
+       </span>
+      </li>
+     </ul>
+    </aside>
+    <!-- Main Dashboard -->
+    <main class="flex-1 p-6">
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center space-x-4">
+       <i class="fas fa-tint text-red-600 text-3xl">
+       </i>
+       <div>
+        <h2 class="text-2xl font-semibold">
+         524
+        </h2>
+        <p class="text-gray-600">
+         Doações
+        </p>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center space-x-4">
+       <i class="fas fa-users text-red-600 text-3xl">
+       </i>
+       <div>
+        <h2 class="text-2xl font-semibold">
+         1,250
+        </h2>
+        <p class="text-gray-600">
+         Doadores
+        </p>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center space-x-4">
+       <i class="fas fa-calendar-check text-red-600 text-3xl">
+       </i>
+       <div>
+        <h2 class="text-2xl font-semibold">
+         35
+        </h2>
+        <p class="text-gray-600">
+         Agendamentos
+        </p>
+       </div>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex items-center space-x-4">
+       <i class="fas fa-heart text-red-600 text-3xl">
+       </i>
+       <div>
+        <h2 class="text-2xl font-semibold">
+         5
+        </h2>
+        <p class="text-gray-600">
+         Campanhas
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- Blood Stock -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+       <h2 class="text-xl font-semibold mb-4">
+        Estoque de Sangue
+       </h2>
+       <div class="space-y-2">
+        <div class="flex justify-between items-center">
+         <span>
+          A+
+         </span>
+         <div class="w-2/3 bg-gray-200 rounded-full h-4">
+          <div class="bg-red-600 h-4 rounded-full" style="width: 70%;">
+          </div>
+         </div>
+         <span>
+          17 units
+         </span>
+        </div>
+        <div class="flex justify-between items-center">
+         <span>
+          A-
+         </span>
+         <div class="w-2/3 bg-gray-200 rounded-full h-4">
+          <div class="bg-red-600 h-4 rounded-full" style="width: 50%;">
+          </div>
+         </div>
+         <span>
+          12 units
+         </span>
+        </div>
+        <div class="flex justify-between items-center">
+         <span>
+          B+
+         </span>
+         <div class="w-2/3 bg-gray-200 rounded-full h-4">
+          <div class="bg-red-600 h-4 rounded-full" style="width: 50%;">
+          </div>
+         </div>
+         <span>
+          12 units
+         </span>
+        </div>
+        <div class="flex justify-between items-center">
+         <span>
+          B-
+         </span>
+         <div class="w-2/3 bg-gray-200 rounded-full h-4">
+          <div class="bg-red-600 h-4 rounded-full" style="width: 25%;">
+          </div>
+         </div>
+         <span>
+          6 units
+         </span>
+        </div>
+        <div class="flex justify-between items-center">
+         <span>
+          AB+
+         </span>
+         <div class="w-2/3 bg-gray-200 rounded-full h-4">
+          <div class="bg-red-600 h-4 rounded-full" style="width: 30%;">
+          </div>
+         </div>
+         <span>
+          7 units
+         </span>
+        </div>
+        <div class="flex justify-between items-center">
+         <span>
+          O+
+         </span>
+         <div class="w-2/3 bg-gray-200 rounded-full h-4">
+          <div class="bg-red-600 h-4 rounded-full" style="width: 20%;">
+          </div>
+         </div>
+         <span>
+          4 units
+         </span>
+        </div>
+        <div class="flex justify-between items-center">
+         <span>
+          O-
+         </span>
+         <div class="w-2/3 bg-gray-200 rounded-full h-4">
+          <div class="bg-red-600 h-4 rounded-full" style="width: 65%;">
+          </div>
+         </div>
+         <span>
+          13 units
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- Donation Campaigns -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+       <h2 class="text-xl font-semibold mb-4">
+        Campanhas de Doação
+       </h2>
+       <ul class="space-y-4">
+        <li class="flex items-center space-x-4">
+         <i class="fas fa-tint text-red-600 text-2xl">
+         </i>
+         <div>
+          <h3 class="font-semibold">
+           Mutirão Comunitário
+          </h3>
+          <p class="text-gray-600">
+           Jun 1 - 7 de, 2023
+          </p>
+         </div>
+        </li>
+        <li class="flex items-center space-x-4">
+         <i class="fas fa-tint text-red-600 text-2xl">
+         </i>
+         <div>
+          <h3 class="font-semibold">
+           Semana de Emergência
+          </h3>
+          <p class="text-gray-600">
+           May 20 - 27, 2023
+          </p>
+         </div>
+        </li>
+        <li class="flex items-center space-x-4">
+         <i class="fas fa-tint text-red-600 text-2xl">
+         </i>
+         <div>
+          <h3 class="font-semibold">
+           Iniciativa Saive Vidas
+          </h3>
+          <p class="text-gray-600">
+           April 15 - 22, 2023
+          </p>
+         </div>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <!-- Recent Donations -->
+     <div class="bg-white p-6 rounded-lg shadow-md mt-6">
+      <h2 class="text-xl font-semibold mb-4">
+       Doações Recentes
+      </h2>
+      <table class="w-full text-left">
+       <thead>
+        <tr>
+         <th class="pb-2">
+          Nome
+         </th>
+         <th class="pb-2">
+          Data
+         </th>
+         <th class="pb-2">
+          Tipo Sanguíneo
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr class="border-t">
+         <td class="py-2">
+          Alice Souza
+         </td>
+         <td class="py-2">
+          Abril 20, 2023
+         </td>
+         <td class="py-2">
+          B+
+         </td>
+        </tr>
+        <tr class="border-t">
+         <td class="py-2">
+          Miguel Oliveira
+         </td>
+         <td class="py-2">
+          Abril 18, 2023
+         </td>
+         <td class="py-2">
+          O+
+         </td>
+        </tr>
+        <tr class="border-t">
+         <td class="py-2">
+          Bia Santos
+         </td>
+         <td class="py-2">
+          Abril 16, 2023
+         </td>
+         <td class="py-2">
+          A-
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </main>
+   </div>
+  </div>
+ </body>
+</html>

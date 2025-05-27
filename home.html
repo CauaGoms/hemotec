@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Hemotec</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      overflow-x: hidden;
+      font-family: Roboto, sans-serif;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      background-color: #C41515;
+      transition: width 0.3s ease;
+      overflow: hidden;
+      z-index: 1000;
+    }
+
+    .sidebar.collapsed {
+      width: 60px;
+    }
+
+    .sidebar.expanded {
+      width: 220px;
+    }
+
+    .sidebar ul {
+      padding-left: 0;
+      margin-top: 60px;
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      padding: 12px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #C41515;
+    }
+
+    .sidebar ul li i {
+      font-size: 1.5rem;
+      width: 30px;
+      text-align: center;
+    }
+
+    .sidebar.collapsed ul li span {
+      display: none;
+    }
+
+    .sidebar.collapsed ul li {
+      justify-content: center;
+    }
+
+    .content {
+      margin-left: 60px;
+      transition: margin-left 0.3s ease;
+      padding: 20px;
+    }
+
+    .content.shifted {
+      margin-left: 220px;
+    }
+
+    .map-placeholder {
+      background-color: #e9ecef;
+      height: 200px;
+      border-radius: 6px;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .small-text {
+      font-size: 0.875rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar collapsed" id="sidebar">
+    <ul>
+      <li><i class="bi bi-house-door"></i><span>Início</span></li>
+      <li><i class="bi bi-person"></i><span>Doadores</span></li>
+      <li><i class="bi bi-calendar-event"></i><span>Agendamentos</span></li>
+      <li><i class="bi bi-droplet-half"></i><span>Estoque de Sangue</span></li>
+      <li><i class="bi bi-megaphone"></i><span>Campanhas</span></li>
+      <li><i class="bi bi-gear"></i><span>Configurações</span></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content" id="mainContent">
+    <h3 class="mb-4">Bem-vindo!</h3>
+
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <h6 class="card-title">Doadores cadastrados</h6>
+            <h3>1.254</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <h6 class="card-title">Doações este mês</h6>
+            <h3>87</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Hemocentros Próximos</h6>
+            <div class="map-placeholder d-flex align-items-center justify-content-center text-muted">
+              <span>Mapa com localizações</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Próximos Agendamentos</h6>
+            <ul class="list-group small-text">
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Lucas Almeida</span> <span>26/04/2024 10:00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Rafael Cardoso</span> <span>26/04/2024 14:00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Ana Oliveira</span> <span>27/04/2024 05:00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Marcos Pereira</span> <span>27/04/2024 11:00</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span>Juliana Rocha</span> <span>27/04/2024 15:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card text-center">
+          <div class="card-body">
+            <h6 class="card-title">Campanhas Ativas</h6>
+            <p class="text-muted">Participe: bastim 5660 vibba</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card bg-danger text-white text-center">
+          <div class="card-body">
+            <h6 class="card-title">Doe Sangue, Salve Vidas</h6>
+            <p>Participe de nossa campanha de doação</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const content = document.getElementById('mainContent');
+
+    sidebar.addEventListener('mouseenter', () => {
+      sidebar.classList.remove('collapsed');
+      sidebar.classList.add('expanded');
+      content.classList.add('shifted');
+    });
+
+    sidebar.addEventListener('mouseleave', () => {
+      sidebar.classList.remove('expanded');
+      sidebar.classList.add('collapsed');
+      content.classList.remove('shifted');
+    });
+  </script>
+</body>
+</html>
